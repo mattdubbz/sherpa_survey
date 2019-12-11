@@ -5,17 +5,11 @@ from django.urls import reverse
 
 
 class Survey(models.Model):
-    title = models.CharField(max_length=100)
-    question1 = models.CharField(max_length=255)
-    response1 = models.IntegerField(blank=False, null=False)
-    question2 = models.CharField(max_length=255)
-    response2 = models.IntegerField(blank=False, null=False)
-    question3 = models.CharField(max_length=255)
-    response3 = models.IntegerField(blank=False, null=False)
-    question4 = models.CharField(max_length=255)
-    response4 = models.IntegerField(blank=False, null=False)
-    question5 = models.CharField(max_length=255)
-    response5 = models.IntegerField(blank=False, null=False)
+    room_score1 = models.IntegerField(blank=True, null=True)
+    room_score2 = models.IntegerField(blank=True, null=True)
+    room_score3 = models.IntegerField(blank=True, null=True)
+    room_score4 = models.IntegerField(blank=True, null=True)
+    room_score5 = models.IntegerField(blank=True, null=True)
 
     def __str__(self):
         return self.title

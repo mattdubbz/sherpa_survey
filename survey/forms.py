@@ -5,21 +5,27 @@ from django.forms.widgets import RadioSelect, Select
 from .models import *
 
 
-class SurveyForm(ModelForm):
+class CustomerSatisfactionSurveyForm(ModelForm):
     class Meta:
-        model = Survey
-        fields = "__all__"
+        model = CustomerSatisfactionSurvey
+        fields = '__all__'
         labels = {
-            "room_score1": "How would you rate the amenities?",
-            "room_score2": "How would you rate the activities?",
-            "room_score3": "How would you rate the room?",
-            "room_score4": "How would you rate the staff?",
-            "room_score5": "How would you rate your overall experience?",
+            'amenities_score': 'How would you rate the amenities?',
+            'activities_score': 'How would rate the activities?',
+            'room_score': 'How would you rate the room?',
+            'atmosphere_score': 'How would you rate the general atmosphere?',
+            'staff_score': 'How would you rate the staff?',
+            'service_score': 'How would you rate the overall service?',
+            'overall_score': 'How would you rate your overall experience?',
+            'improve_text': 'Is there any way that we could improve any of our ratings?',
+            'comments': 'Anything else you want to tell us?'
         }
         widgets = {
-            "room_score1": Select,
-            "room_score2": Select,
-            "room_score3": Select,
-            "room_score4": Select,
-            "room_score5": Select,
+            'amenities_score': Select,
+            'activities_score': Select,
+            'room_score': Select,
+            'atmosphere_score': Select,
+            'staff_score': Select,
+            'service_score': Select,
+            'overall_score': Select,
         }

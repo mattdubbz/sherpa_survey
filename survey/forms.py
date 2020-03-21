@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import ModelForm
-from django.forms.widgets import RadioSelect, Select
+from django_starfield import Stars
 
 from .models import *
 
@@ -21,11 +21,11 @@ class CustomerSatisfactionSurveyForm(ModelForm):
             'comments': 'Anything else you want to tell us?'
         }
         widgets = {
-            'amenities_score': Select,
-            'activities_score': Select,
-            'room_score': Select,
-            'atmosphere_score': Select,
-            'staff_score': Select,
-            'service_score': Select,
-            'overall_score': Select,
+            'amenities_score': Stars,
+            'activities_score': Stars,
+            'room_score': Stars,
+            'atmosphere_score': Stars,
+            'staff_score': Stars,
+            'service_score': Stars,
+            'overall_score': Stars,
         }

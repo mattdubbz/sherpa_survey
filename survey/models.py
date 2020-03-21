@@ -29,8 +29,8 @@ class CustomerSatisfactionSurvey(models.Model):
     improve_text = models.TextField(blank=True, null=True)
     comments = models.TextField(blank=True, null=True)
 
-    def __str__(self):
-        return self.title
+    # def __str__(self):
+    #     return self.title
 
     def get_absolute_url(self):
         return reverse("survey", args=[str(self.id)])

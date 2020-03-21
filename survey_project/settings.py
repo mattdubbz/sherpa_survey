@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "crispy_forms",
     "survey.apps.SurveyConfig",
+    "django_starfield",
 ]
 
 MIDDLEWARE = [
